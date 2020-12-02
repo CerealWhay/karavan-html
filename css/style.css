@@ -64,6 +64,19 @@ body {
 .container {
   width: 1200px;
   margin: 0px auto;
+  margin: 0px auto;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    width: 800px;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    width: 90%;
+  }
 }
 
 #mainframe {
@@ -72,8 +85,19 @@ body {
   display: grid;
   -ms-grid-columns: 150px auto;
       grid-template-columns: 150px auto;
-  grid-row: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
   grid-gap: 25px;
+}
+
+@media (max-width: 850px) {
+  #mainframe {
+    padding-top: 25px;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+  }
 }
 
 #mainframe #logo {
@@ -93,6 +117,12 @@ body {
   font-weight: bold;
 }
 
+@media (max-width: 850px) {
+  #mainframe #name {
+    font-size: 20px;
+  }
+}
+
 #mainframe #main-text {
   -ms-grid-column: 2;
   grid-column: 2;
@@ -105,6 +135,15 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 20px;
+}
+
+@media (max-width: 850px) {
+  #mainframe #main-text {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    width: 100%;
+    font-size: 16px;
+  }
 }
 
 #mainframe #main-text .main-text__mail {
@@ -142,6 +181,14 @@ body {
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
   grid-gap: 15px;
+}
+
+@media (max-width: 750px) {
+  #mainframe #main-text .main-text__adress {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    grid-gap: 5px;
+  }
 }
 
 #mainframe #main-text .main-text__adress .main-text__adress__name {
